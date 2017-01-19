@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_first_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.user.easya.FirstMenu">
+
+    <Button
+        android:text=" Log Out "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/logOutButton"
+        style="@style/Widget.AppCompat.Light.ActionButton"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/usernameDisplay"
+        android:typeface="normal"
+        android:text="@string/studentName"
+        android:backgroundTint="@android:color/background_light"
+        android:foregroundTint="@color/colorAccent"
+        android:textColorHighlight="@color/colorAccent"
+        android:background="@android:color/transparent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/logOutButton"
+        android:layout_alignBottom="@+id/logOutButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/updateButton"
+        android:layout_toLeftOf="@+id/updateButton"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="DEADLINES"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/CalendarButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:text="Updates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateButton"
+        android:background="@color/newGreen"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/CalendarButton"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="goToCourses"
+        android:textStyle="normal|bold" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/updateButton"
+        android:layout_below="@+id/logOutButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/studentMenu" />
+
+</RelativeLayout>

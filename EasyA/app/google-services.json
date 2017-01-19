@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "868195864122",
+    "firebase_url": "https://easya-c2f38.firebaseio.com",
+    "project_id": "easya-c2f38",
+    "storage_bucket": "easya-c2f38.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868195864122:android:cef31d159da9d0a0",
+        "android_client_info": {
+          "package_name": "com.example.user.easya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868195864122-tues4araaghna4e426edgapk6nq2gc4b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.easya",
+            "certificate_hash": "476B863C24FA4DC1FF558D38D0FF3EFDAD7CEB77"
+          }
+        },
+        {
+          "client_id": "868195864122-vs3e77iif35ons64nkgdgv904l5enlvv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5P39SpsJCyBSq5cbRquQXzvAKiJPIcbE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868195864122-vs3e77iif35ons64nkgdgv904l5enlvv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
