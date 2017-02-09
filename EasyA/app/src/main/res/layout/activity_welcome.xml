@@ -24,19 +24,6 @@
         android:layout_centerHorizontal="true" />
 
     <EditText
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/usernameInputField"
-        android:layout_alignBaseline="@+id/usernamePrompt"
-        android:layout_alignBottom="@+id/usernamePrompt"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_height="40dp"
-        android:layout_width="190dp"
-        android:hint="@string/usernamePromptString"
-        android:textAlignment="center" />
-
-    <EditText
         android:layout_width="190dp"
         android:layout_height="40dp"
         android:inputType="textPassword"
@@ -51,41 +38,28 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <Button
-        android:text="Go!"
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:elevation="0dp"
-        android:visibility="visible"
-        android:backgroundTint="@color/colorAccent"
-        android:onClick="goToNext"
-        android:layout_below="@+id/passwordInputField"
-        android:layout_centerHorizontal="true" />
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/emailInput"
+        android:layout_below="@+id/welcome_image"
+        android:layout_toRightOf="@+id/emailPrompt"
+        android:layout_toEndOf="@+id/emailPrompt"
+        android:hint="Enter your email"
+        android:textAlignment="center" />
 
     <ImageView
         app:srcCompat="@drawable/welcome_screen"
         android:id="@+id/welcome_image"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="190dp" />
-
-    <TextView
-        android:text="Username : "
-        android:id="@+id/usernamePrompt"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:gravity="center_horizontal"
-        android:textAllCaps="true"
-        android:textSize="24sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="166dp" />
+        android:layout_above="@+id/emailPrompt" />
 
     <TextView
         android:text="Password :"
@@ -96,7 +70,21 @@
         android:textSize="24sp"
         android:gravity="center_horizontal"
         android:textAllCaps="true"
-        android:layout_below="@+id/usernameInputField"
+        android:layout_below="@+id/emailInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Email : "
+        android:id="@+id/emailPrompt"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:gravity="center_horizontal"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:layout_marginBottom="46dp"
+        android:layout_above="@+id/mainEnterButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -104,10 +92,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/googlemedium"
-        android:id="@+id/imageButton6"
+        android:id="@+id/googleSignIn"
+        android:background="@color/matchingRed"
+        android:onClick="signIntoGoogle"
+        android:cropToPadding="false"
+        android:adjustViewBounds="false"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@android:color/transparent" />
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:text="Don't have an account? REGISTER!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerButton"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/mainEnterButton"
+        android:layout_alignEnd="@+id/mainEnterButton"
+        android:layout_alignLeft="@+id/mainEnterButton"
+        android:layout_alignStart="@+id/mainEnterButton" />
+
+    <Button
+        android:text="Log in to your account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainEnterButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:elevation="0dp"
+        android:visibility="visible"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="goToNext"
+        android:layout_above="@+id/registerButton"
+        android:layout_alignRight="@+id/welcome"
+        android:layout_alignEnd="@+id/welcome" />
 
 </RelativeLayout>
